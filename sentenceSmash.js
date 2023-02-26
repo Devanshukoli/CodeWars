@@ -9,16 +9,17 @@
 
 // 1st one :
 
-/*
-smash = function (words) {
+words = ['nature', 'fire', 23, , undefined]
+function smash(words) {
   // using .join() method
   // it is the string-conversion method, which basically take all the string/object in the array and concatenate them and return new STRING.
 
-  words = ['nature', 'fire', 23, , undefined]
   
-  return console.log(words.join(" "))  
+  return words.length > 0 ? words.reduce((prev, el) => prev + " " + el) : "";
+  // return words.join(" ")  
 }
-*/
+
+console.log(smash(words))
 // 2nd way
 words = ['nature', 'fire', 23, , undefined]
 const smash = words => words.join('* ');
