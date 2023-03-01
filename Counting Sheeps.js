@@ -65,4 +65,13 @@ function countSheeps(arrayOfSheep) {
 }
 one line code.
 let countSheeps = x => x.filter( s => s ).length;
+
+// via forEach loop
+function countSheeps(arrayOfSheep) {
+  let sheepEncounter = 0;
+  arrayOfSheep.forEach( item => {
+    item ? sheepEncounter++ : sheepEncounter; 
+  });
+  return sheepEncounter;
+}
   */
