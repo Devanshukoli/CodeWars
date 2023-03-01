@@ -63,4 +63,6 @@ function countSheeps(arrayOfSheep) {
 function countSheeps(arrayOfSheep) {
     return arrayOfSheep.reduce((acc, cur) => acc + cur, 0)
 }
+one line code.
+let countSheeps = x => x.filter( s => s ).length;
   */
