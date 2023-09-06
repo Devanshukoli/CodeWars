@@ -22,10 +22,10 @@ let inputData = JSON.parse(promp)
 
 const seniorOrOpen = (inputData) => {
   let result = []
-  for(let i = 0; i < inputData.length; i++) {
+  for (let i = 0; i < inputData.length; i++) {
     let age = inputData[i][0]
     let handicap = inputData[i][1]
-    (age >= 55 && handicap > 7) ? result.push('Senior') : result.push('Open')
+      (age >= 55 && handicap > 7) ? result.push('Senior') : result.push('Open')
   }
   return result
 }
@@ -33,15 +33,15 @@ const seniorOrOpen = (inputData) => {
 console.log(seniorOrOpen(inputData))
 
 // method 1:
-function openOrSenior(data){
+function openOrSenior(data) {
   return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
 }
 
 // method 2:
-function openOrSenior(data){
+function openOrSenior(data) {
   var result = [];
-  data.forEach(function(member) {
-    if(member[0] >= 55 && member[1] > 7) {
+  data.forEach(function (member) {
+    if (member[0] >= 55 && member[1] > 7) {
       result.push('Senior');
     } else {
       result.push('Open');
@@ -51,15 +51,15 @@ function openOrSenior(data){
 }
 
 // method 3 : 
-function openOrSenior(data){
-  function determineMembership(member){
+function openOrSenior(data) {
+  function determineMembership(member) {
     return (member[0] >= 55 && member[1] > 7) ? 'Senior' : 'Open';
   }
   return data.map(determineMembership);
 }
 
 // method 4 : 
-const openOrSenior = (members) => members.map(([age, handicap]) => (age >= 55) && (handicap > 7) ? 'Senior' : 'Open
+const openOrSenior = (members) => members.map(([age, handicap]) => (age >= 55) && (handicap > 7) ? 'Senior' : 'Open'
 
 
 // method 5 : 
@@ -68,12 +68,12 @@ const Category = {
   Senior: 'Senior',
 };
 
-function openOrSenior(data){
- return data.map(([age, handicap]) => {
+function openOrSenior(data) {
+  return data.map(([age, handicap]) => {
     if (age >= 55 && handicap > 7) {
       return Category.Senior;
     }
 
     return Category.Open;
- });
+  });
 }
