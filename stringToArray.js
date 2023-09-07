@@ -25,7 +25,10 @@ function stringToArray(string) {
 }
 
 // method 3 : 
-stringToArray = function(str) {
+stringToArray = function (str) {
   return str.trim().split(" ");
 };
 console.log(stringToArray("I am learning JavaScript right now"));
+
+// method 4 : One liner code
+let arrayOfWords = str = str.split(' ')
