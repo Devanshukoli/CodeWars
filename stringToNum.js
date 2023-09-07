@@ -11,6 +11,7 @@ Examples
 */
 
 // My code
+// Here, prompt() method will not work because it is global window object that manipulate brwoser dom apis, and it is not part of js language, such that If you directly try to run it in without any browser, it will give you error like this : prompt is not defined.(It will literally take it as function.)
 const promp = prompt('Enter the string:');
 
 function stringToNum(promp) {
@@ -19,14 +20,9 @@ function stringToNum(promp) {
 
 console.log(stringToNum(promp));
 
-// method 1
-var stringToNumber = function(str){
-  return parseInt(str);
-}
-
-// method 2
+// method 1 : Using parseInt() method
 var stringToNumber = function (str) {
-  return Number(str)
+  return parseInt(str);
 }
 
 // method 3
