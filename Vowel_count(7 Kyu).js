@@ -10,9 +10,9 @@ The input string will only consist of lower case letters and/or spaces.
 // My Try code
 const promp = prompt('Enter the string:')
 
-function vowelCount(promp){
+function vowelCount(promp) {
   const count = promp.match(/[aeiou]/gi)
-  return count? count.length : 0
+  return count ? count.length : 0
 }
 
 console.log(vowelCount(promp))
@@ -20,15 +20,15 @@ console.log(vowelCount(promp))
 // method 1 : using for loops
 function getCount(str) {
   var vowelsCount = 0;
-  var vowels = ["a","e","i","o","u"];
-  for(var i = 0;i < str.length;i++){
-    for(var j=0;j<vowels.length;j++){
-      if(str[i] === vowels[j]){
+  var vowels = ["a", "e", "i", "o", "u"];
+  for (var i = 0; i < str.length; i++) {
+    for (var j = 0; j < vowels.length; j++) {
+      if (str[i] === vowels[j]) {
         vowelsCount++;
       }
     }
   }
-  
+
   return vowelsCount;
 }
 
