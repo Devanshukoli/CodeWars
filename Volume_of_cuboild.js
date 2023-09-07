@@ -17,18 +17,18 @@ findVolume(length, width, height)
 // method 1
 var Kata;
 
-Kata = (function() {
-  function Kata() {}
+Kata = (function () {
+  function Kata() { }
 
-  Kata.getVolumeOfCuboid = function(length, width, height) {
+  Kata.getVolumeOfCuboid = function (length, width, height) {
     var l = parseFloat(length);
     var w = parseFloat(width);
     var h = parseFloat(height);
 
-    if(isNaN(l) || isNaN(w) || isNaN(h)) return 0;
-    if(l<=0 || w<=0 ||h <= 0)  return 0;
-    
-    return l*w*h;
+    if (isNaN(l) || isNaN(w) || isNaN(h)) return 0;
+    if (l <= 0 || w <= 0 || h <= 0) return 0;
+
+    return l * w * h;
   };
 
   return Kata;
@@ -37,7 +37,7 @@ Kata = (function() {
 
 // method 2:
 const Kata = {
-  getVolumeOfCuboid : (length, width, height) => length * width * height
+  getVolumeOfCuboid: (length, width, height) => length * width * height
 }
 
 //method 3: 
@@ -46,3 +46,6 @@ const Kata = {
     return length * width * height
   }
 }
+
+// method 4 : one liner code
+let kata = (l, w, h) => l * w * h 
