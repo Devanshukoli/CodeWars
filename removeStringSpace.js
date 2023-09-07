@@ -2,10 +2,10 @@
 Simple, remove the spaces from the string, then return the resultant string.
 */
 
-   
+
 // method 1 :  via regex + replace() method 
-fucntion removeSpace(x) {
-  // here, note that trim() method only trim the given string and not actually modify it. BUT replace () method actually MODIFTY the string.
+function removeSpace(x) {
+  // here, note that trim() method only trim the given string and not actually modify it. BUT replace() method actually MODIFTY the string.
   return x.repalce('/ /g', ' ')
 }
 
@@ -20,7 +20,7 @@ function removeSpace(x) {
 }
 
 // method 3 : using replace + join
-function noSpace(x){return x.split(' ').join('')}
+let noSpace = (x) => x.split(' ').join('')
 
 // method 4 
 function noSpace(x) {
@@ -31,6 +31,6 @@ function noSpace(x) {
 }
 
 // method 5 : via using match() method
-function noSpace(x){
-return x.match(/\S/g).join('');
+function noSpace(x) {
+  return x.match(/\S/g).join('');
 }
