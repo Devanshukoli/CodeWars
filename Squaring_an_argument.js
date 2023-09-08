@@ -15,4 +15,5 @@ let square = (n) => {
   return n
 }
 
+// method 2 : using one liner code.
 const square = s => s ** 2
