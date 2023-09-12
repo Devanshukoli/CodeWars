@@ -9,10 +9,17 @@ Examples (Input --> Output)
 "a234"   -->  false
 */
 
-function validPin(str) {
-    let num = Number(str)
-    let ans = (num.length === 4 || num.length === 6) ? true : false
-    console.log(ans)
+// My Try code
+function validatePIN(pin) {
+    
+    if (pin.length === 4 || pin.length === 6) {
+        for (let i = 0; i < pin.length; i++) {
+            if (isNaN(parseInt(pin))) {
+                return false
+            }
+        }
+        return true
+    } else {
+        return false
+    }
 }
-
-validPin('123456')
