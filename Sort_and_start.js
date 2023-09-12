@@ -11,7 +11,7 @@ You should not remove or add elements from/to the array.
 
 function twoSort(s) {
     let sorted = s.sort()
-    
+
     let splitedFirstElement = sorted[0].split('')
     console.log('splitedfirstElement : ', splitedFirstElement)
 
@@ -20,23 +20,41 @@ function twoSort(s) {
 
     let ans = splitedFirstElement.join('***')
     console.log('ans ', ans)
-   
+
+
+    //     I understand your confusion.The reason why '' doesn't add after the last character 'n' is because .join(' *** ') only adds the specified separator ('') between elements in the array, not after the last element.
+
+    // In other words, it adds '***' between each pair of adjacent elements but not after the last element.That's the default behavior of the .join() method in JavaScript.
+
 }
 
 twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"])
 
 
-// function twoSort(s) {
-//     let sorted = s.sort();
-//     let firstWord = sorted[0];
+// Method 1 : One liner code.
+let twoSort = (s) => s.sort()[0].split('').join('***')
 
-//     // Split the first word into an array of characters
-//     let charArray = firstWord.split('');
+// Method 2 : using spread oprator and one liner code combination.
+let twoSort = (s) => [...s.sort()[0]].join('***')
 
-//     // Join the characters with '***' between them
-//     let ans = charArray.join('***');
+// Method 3 : using for loop for adding '***' in the string.
+function twoSort(s) {
+    var last = s.sort()[0];
+    var a = last[0];
+    for (var i = 1; i < last.length; i++) {
+        a += "***" + last[i];
+    }
+    return a;
+}
 
-//     return ans;
-// }
+// Method 4 : Using regex 
+function twoSort(q) {
+    let a = q.sort();
+    a = a[0].replace(/(.)(?=.{1,}$)/g, '$1***');
+    return a;
+}
 
-// console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));
+// Mehtod 5 : using reduce() method for sorting.
+function twoSort(array) {
+    return [...array.reduce((min, str) => min < str ? min : str)].join("***");
+}
