@@ -13,10 +13,20 @@ You will be given a string of numbers and letters mixed up, you have to return a
 
 function filterNumber(str) {
     // Use a regular expression to match all numbers in the string
-    return str.match(/\d+/g).join('')
+    let numArray = str.match(/\d+/g).join('')
+    return parseInt(numArray)
 }
 
 // Example usage:
 const mixedString = "abc123def456gh7";
 const numbersArray = filterNumber(mixedString);
 console.log(numbersArray);
+
+
+
+// Method 1 : using one liner code.
+let FilterString = value => +value.replace(/\D/g, '');
+
+let FilterString = function (value) {
+    return +value.split('').filter(n => !isNaN(n)).join('');
+}
