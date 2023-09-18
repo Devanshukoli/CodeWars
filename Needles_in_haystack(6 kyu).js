@@ -61,3 +61,10 @@ var obj = {
 };
 var results = search(obj, "Codewars");
 console.log(results); // Output: ["obj2.obj3.something", "obj2.str", "site"]
+
+// Method 1 : 
+function search(h, n) {
+  var rs = [];
+  for (var i in h) rs = typeof h[i] == "string" && h[i].indexOf(n) >= 0 ? rs.concat([i]) : typeof h[i] == "object" ? rs.concat(search(h[i], n).map(x => i + "." + x)) : rs;
+  return rs.sort();
+}
