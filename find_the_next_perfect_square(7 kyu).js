@@ -15,7 +15,6 @@ Examples:(Input --> Output)
 */
 
 // My Try code.
-
 function findNextSquare(sq) {
     // first check if given parameter `sq` is square root of someone.
     const sqrt = Math.sqrt(sq);
@@ -31,4 +30,9 @@ function findNextSquare(sq) {
     } else {
         return -1;
     }
+}
+
+// Method 1 : Short-hand + ternary way.
+function findNextSquare(sq) {
+    return Math.sqrt(sq) % 1 ? -1 : Math.pow(Math.sqrt(sq) + 1, 2);
 }
