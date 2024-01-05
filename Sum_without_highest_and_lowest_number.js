@@ -64,3 +64,13 @@ const array2 = [1, 1, 11, 2, 3];
 
 console.log(sumArray(array1)); // Output: 16
 console.log(sumArray(array2)); // Output: 6
+
+// Method 1: Short-hand + Ternary;
+sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((acc, num) => acc + num, 0) : 0
+
+// Method 2 : Using spread operator for finding out high and low.
+function sumArray(array) {
+    return Array.isArray(array) && array.length > 1
+        ? array.reduce((s, n) => s + n, 0) - Math.min(...array) - Math.max(...array)
+        : 0
+}
