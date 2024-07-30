@@ -37,9 +37,6 @@ function tri(n) {
 console.log(tri(2))
 
 // method 1 : After analyizng the triangle for up close you noticed that it is giving me ans n = 3 then ans = 3^3 = 27
-
 function tri(n) {
   return Math.pow(n, 3)
 }
-
-// method 2 ; 

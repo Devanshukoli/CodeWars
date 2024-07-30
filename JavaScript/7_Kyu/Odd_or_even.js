@@ -17,7 +17,6 @@ Output: "even"
 */
 
 // My Try code
-
 function oddOrEven(str) {
   let sum = str.reduce((acc, currentValue) => acc + currentValue, intialValue = 0)
   console.log('sum : ', sum)

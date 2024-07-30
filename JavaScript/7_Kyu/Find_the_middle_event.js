@@ -17,10 +17,8 @@ gimme([5, 10, 14]) => 1
 
 function gimme(triplet) {
     let sortedTriplet = triplet.slice().sort((a, b) => a - b)
-    console.log('sorted triplet', sortedTriplet)
 
     let middleValue = sortedTriplet[1]
-    console.log(middleValue)
 
     console.log(triplets.indexOf(middleValue))
 

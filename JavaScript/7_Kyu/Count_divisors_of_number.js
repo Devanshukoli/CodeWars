@@ -25,7 +25,6 @@ function getDivisorsCnt(n) {
 // Other methods.
 const getDivisorsCnt = n => [...Array(n).keys()].filter(i => n % (i + 1) === 0).length;
 
-
 function getDivisorsCnt(n) {
     let count = 0;
     for (let i = 1; i <= Math.sqrt(n); i++) {

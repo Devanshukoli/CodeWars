@@ -25,4 +25,4 @@ function returnBinary(sum) {
 console.log(returnBinary(sum))
 
 // Method 1 : clear code(arrow function)
-const returnBinary = (sum) => return sum.toString(2)
+const returnBinary = (sum) => sum.toString(2)

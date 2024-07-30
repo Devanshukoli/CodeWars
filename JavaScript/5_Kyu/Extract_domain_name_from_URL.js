@@ -8,9 +8,7 @@ Write a function that when given a URL as a string, parses out just the domain n
 
 function domainName(url) {
     url = url.replace(/^(https?:\/\/)/, '');
-
     url = url.replace(/^www\./, '')
-
     return url.split('.')[0];
 }
 

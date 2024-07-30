@@ -48,13 +48,10 @@ function sumArray(arr) {
 
     // Sort the array in ascending order
     const sortedArray = arr.slice().sort((a, b) => a - b);
-    console.log('sortedArray...', sortedArray)
     // Remove the first and last elements (lowest and highest)
     const trimmedArray = sortedArray.slice(1, sortedArray.length - 1);
-    console.log('trimmedArray....', trimmedArray);
     // Sum the remaining elements
     const sum = trimmedArray.reduce((acc, num) => acc + num, 0);
-    console.log('sum', sum)
     return sum;
 }
 

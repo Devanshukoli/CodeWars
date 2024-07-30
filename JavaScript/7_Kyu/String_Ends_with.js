@@ -7,7 +7,7 @@ solution('abc', 'd') // returns false
 */
 
 function solution(str, ending) {
-    return str.endsWith(ending) ? True : false;
+    return str.endsWith(ending) ? true : false;
 }
 
 console.log(solution('buggy the clown', 'ow'))
