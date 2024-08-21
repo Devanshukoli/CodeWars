@@ -48,7 +48,11 @@ function dirReduc(arr) {
         'WEST': 'EAST'
     };
 
+    // Use a stack (or an array in JavaScript) to keep track of the directions.
+
     return arr.reduce((stack, cur) => {
+        // If the stack is empty or the current direction isn't opposite to the top of the stack, push it onto the stack
+        // If the current direction is opposite to the top of the stack, pop the top element off the stack.
         if (stack[stack.length - 1] === opposites[cur]) {
             stack.pop();
         } else {
