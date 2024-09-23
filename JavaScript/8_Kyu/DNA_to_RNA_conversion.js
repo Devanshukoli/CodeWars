@@ -21,3 +21,16 @@ function DANtoRNA(dna) {
 
     return dna.split('').map(n => replacableThings[n]).join('')
 }
+
+// Other methods...
+function DNAtoRNA(dna) {
+    return dna.replace(/T/g, 'U');
+}
+
+function DNAtoRNA(dna) {
+    return dna.replaceAll('T', 'U');
+}
+
+function DNAtoRNA(dna) {
+    return dna.split("T").join("U");
+}
