@@ -1,3 +1,5 @@
-# CodeWars
-This repository contains my everyday challenge-solution of codewars.
-- Most of them are 8 Kyu (**Beginner Freindly**), If the 7kyu or less comes I will mention them :)
+# Codewars
+
+This repository contains all of my psuedo code for solving any problems with javascript. ( later I started with different programming language. )
+
+- Basically started with 8 Kyus. Then 7 Kyu and so on.
