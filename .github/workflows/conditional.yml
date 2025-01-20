@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   hello-world:
-   if: github.repository == 'octocat/hello-world'
+   if: github.repository == 'Devanshukoli/CodeWars'
    runs-on: ubuntu-latest
    steps:
     - name: "Hello Wrold"
