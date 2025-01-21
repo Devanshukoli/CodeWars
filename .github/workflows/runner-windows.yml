@@ -13,24 +13,26 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Install dependencies
         run: choco install dotnetcore-sdk
         shell: powershell
 
-      - name: Compile and run c# Program
+      - name: Compile and run C# program
         run: |
-          Add-content -Path "Hello.cs" -Value @"
+          Add-Content -Path "Hello.cs" -Value @"
           using System;
-          public class Hello {
-            public static void Main() {
-              Console.WriteLin("Hello World! from C#");
+          public class Hello
+          {
+              public static void Main()
+              {
+                  Console.WriteLine("Hello, Windows from C#");
               }
           }
           "@
           dotnet new console --force --no-restore
-          Move-Item -Path "Hello.cs" Destination "Program.cs" -Force
+          Move-Item -Path "Hello.cs" -Destination "Program.cs" -Force
           dotnet run
         shell: powershell
