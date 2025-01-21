@@ -8,13 +8,15 @@ on:
 jobs: 
   job2:
    runs-on: ubuntu-latest
+   # job2 depends on job1 ( which means this will be skipped if job1 fails)
+   # also it gives nice relationship-visulization in the actions tab on github.
    needs: job1
    steps:
-    - name: StepA
+    - name: StepB
       run: echo "World!"
 
   job1:
    runs-on: ubuntu-latest
    steps: 
-    - name: StepB
+    - name: StepA
       run: echo "Hello!"
