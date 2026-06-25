@@ -12,3 +12,5 @@ function reverseLetter(str) {
         return word.split('').reverse().join('')
     }).join(' ')
 }
+
+console.log(reverseLetter("Let's take codewars contest"))
