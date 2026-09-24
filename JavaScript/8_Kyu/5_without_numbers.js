@@ -10,3 +10,5 @@ Good luck :)
 function unusualFive() {
     return 'Five!'.length
 }
+
+console.log(unusualFive())
